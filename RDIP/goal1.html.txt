@@ -1,0 +1,4 @@
+Drop down: on change
+Reform: Sentence has to be in previous state
+Evalute: check whether the answer is correct are not.
+Anser: anser has to shown
