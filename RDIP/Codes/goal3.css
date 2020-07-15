@@ -1,0 +1,21 @@
+.exp{
+	font-family: serif;
+}
+#e{
+	font-size: x-large;
+	margin-left: 75px;
+}
+#sm{
+	color: black;
+	text-align: center;
+	display: block;
+}
+#sm1{
+	color: red;
+	text-align: center;
+	display: block;
+}
+button{
+	margin-left: 100px;
+	align:center;
+}
