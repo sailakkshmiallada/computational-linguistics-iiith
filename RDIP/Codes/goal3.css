@@ -5,10 +5,11 @@
 	font-size: x-large;
 	margin-left: 75px;
 }
-#sm{
-	color: black;
+#sm,#fs{
+	color: darkblue;
 	text-align: center;
 	display: block;
+	font-weight: bold;
 }
 #sm1{
 	color: red;
@@ -17,5 +18,16 @@
 }
 button{
 	margin-left: 100px;
-	align:center;
+	align :center;
+}
+#sm2{
+	display: block;
+	font-size: x-large;
+	font-weight: bold;
+	color:black;
+	font-family: "Arial", Helvetica;
+}
+#ff{
+	display: block;
+	text-align: center;
 }

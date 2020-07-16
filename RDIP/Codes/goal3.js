@@ -5,12 +5,12 @@ function display(a) {
 	if(a == "eng"){
 		document.getElementById("sm").innerHTML = "Form a sentence (Declarative or Interrogative or any other type) from the given words"+"<br>"
 		document.getElementById("sm1").innerHTML ="<i>(select the buttons in proper order)</i>"
-		es();
+		es1()
 	}
 	else if(a == "hin"){
 		document.getElementById("sm").innerHTML = "Form a sentence (Declarative or Interrogative or any other type) from the given words"+"<br>"
 		document.getElementById("sm1").innerHTML ="<i>(select the buttons in proper order)</i>"
-		hs();
+		hs1()
 	}
 	else{
 		alert("Select language");
@@ -44,13 +44,34 @@ function s(n) {
   return string;                        
 }
 function button(n) {
-	
-	var na = n.split(" ")
-	for( var i = 0; i <= na.length-1; i++) {
+
+	    document.getElementById("ss").innerHTML = " "
+	    var na = n.split(" ")
+	    for( var i = 0; i <= na.length-1; i++) {
     var button = document.createElement("button");
      button.innerHTML = na[i];
+     button.className += "ps"
      var c = document.getElementById("ss");
      c.appendChild(button);
  }
-    
-}
+ $(".ps").click(function(){
+			            $(this).hide()
+     	       var z = $(this).text();
+		  	            document.getElementById("sm2").innerHTML += z + " ";
+			            document.getElementById("fs").innerHTML = "<b>Formed Sentence</b>"+"<i>(After selection)</i>";
+
+     })
+     document.getElementById("sm2").innerHTML = " "
+     document.getElementById("fs").innerHTML = " "
+     ff();
+     function ff(){
+    $("button").click(function(){
+		    document.getElementById("ff").innerHTML = null;
+ 			       var b = document.createElement("button")
+     		b.innerHTML = "Re-form Sentence again"
+     		var d = document.getElementById("ff");
+     		d.appendChild(b)
+})
+} 
+document.getElementById("ff").innerHTML=null;
+ }
