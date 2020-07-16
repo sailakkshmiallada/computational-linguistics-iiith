@@ -16,6 +16,8 @@
 	text-align: center;
 	display: block;
 }
+
+
 button{
 	margin-left: 100px;
 	align :center;
@@ -27,7 +29,8 @@ button{
 	color:black;
 	font-family: "Arial", Helvetica;
 }
-#ff{
+span{
 	display: block;
 	text-align: center;
 }
+
