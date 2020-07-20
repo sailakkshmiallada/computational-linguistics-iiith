@@ -33,3 +33,25 @@ span{
 	display: block;
 	text-align: center;
 }
+#c{
+	margin-left: 0px;
+}
+#ff{
+	margin:auto;
+}
+#rm{
+	display: block;
+	font-size:xx-large;
+	color: blue;
+}
+#w{
+	display: block;
+	text-align: center;
+	font-size: x-large;
+	color: red;
+}
+#gs{
+	display: block;
+	text-align: center;
+	margin:auto;
+}
