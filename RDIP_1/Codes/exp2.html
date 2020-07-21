@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>EXPERIMENT</title>    
+        <link href="exp2.css" rel="stylesheet"/>
+        <script data-main ="exp2.js"  src="../Libraries/require.js"></script>
+    </head>
+    <body>
+        <div id="experiment">
+            <h1>Experiment</h1>
+            <div id="corpusMenu">
+                <select name="corpus" id="corpus" onchange="dispCorpus(this.value)" onfocus="this.selectedIndex = -1;">
+                <option value="select" select="selected">Select a Corpus</option>
+                <option value="0">Corpus 1</option>
+                <option value="1">Corpus 2</option>
+                <option value="2">Corpus 3</option>
+                </select>
+            </div>
+            <div id="content">
+                <p id="corpus-display"></p>
+                <p id="initialMsg"></p>
+                <form name="form" id="input-form" class="hide">
+                    <table id="input">
+                        <tr><td>#tokens:</td>
+                        <td id="tokens"><input type="text" name="tokens" id="h1"></td></tr>
+                        <tr><td>#types:</td>
+                        <td id="types"><input type="text" name="types" id="h2"></td></tr>
+                    </table><br>
+                        <input onclick="checkAnswer()" id="d1" type="button" value="SUBMIT">
+                </form>
+                <h4 id="so1"></h4>
+                <button id = "c1" class="hide" onclick="dispRoot()">CONTINUE</button>
+                <p id="secondMsg"></p>
+                <form name="form2" id="root-input" class="hide">
+                    <input type="text" name="roots" id="h3"><br><br>
+                    <input id="d2" type="button" value="SUBMIT" onclick="findRoots()">
+                    <h4 id="so2"></h4>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
