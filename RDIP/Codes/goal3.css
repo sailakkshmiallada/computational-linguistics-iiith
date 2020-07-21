@@ -5,6 +5,8 @@
 	font-size: x-large;
 	margin-left: 75px;
 }
+
+
 #sm,#fs{
 	color: darkblue;
 	text-align: center;
@@ -26,7 +28,7 @@ button{
 	display: block;
 	font-size: x-large;
 	font-weight: bold;
-	color:black;
+	color:black;     
 	font-family: "Arial", Helvetica;
 }
 span{

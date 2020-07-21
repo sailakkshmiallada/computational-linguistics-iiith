@@ -1,0 +1,64 @@
+#corpusMenu {
+    text-align: center;
+}
+
+select#corpus {
+    height: 5vh;
+    width: 15vw;
+    font-size: larger;
+    text-align: center;
+    color:blue;
+
+
+}
+
+#corpus-display {
+    text-align: center;
+    margin-left: 22vw;
+    margin-right: 22vw;
+}
+
+#content {
+    text-align: center;
+    font-size: x-large;
+}
+
+.hide {
+    display: none;
+}
+
+table {
+    text-align: center;
+    margin: auto;
+    width: 35%;
+}
+
+td {
+    border: solid 1.9px grey;
+    padding: 1.8vh;
+    width: 60%;
+}
+
+#d1, #c1, #d2 {
+    width: 15vw;
+    height: 8vh;
+    font-size: large;
+    color:darkblue;
+}
+
+.correct {
+    background-color: green;
+}
+
+.wrong {
+    background-color: red;
+}
+
+#h1, #h2 {
+    font-size: large;
+}
+
+#h3 {
+    font-size: large;
+    width: 20vw;
+}

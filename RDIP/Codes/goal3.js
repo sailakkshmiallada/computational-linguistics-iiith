@@ -97,12 +97,15 @@ function button(n) {
      document.getElementById("w").innerHTML = " "
      $("#ff").hide();
      $("#c").hide();
+     $("#gs").hide()
+     $("#cms").hide();
      $("#ff").click(function(){
 		$("#sm2").hide();
 		$("#fs").hide();
 		$("#ff").hide();
 		$("#c").hide();
 		$("#gs").hide();
+		$("#cms").hide();
 
 		b();
 		a();
@@ -129,15 +132,27 @@ function button(n) {
 							$("#rm").show()
 							$("#w").hide();
 							document.getElementById("rm").innerHTML = "Right answer!!!"
+							$("#c").click(function(){
+								$("#w").hide();
+								$("#gs").hide()
+								$("#cms").hide()
+						})
+						
+						$("#gs").show();
+						$("#cms").show();
 						}
 						else{
 							$("#w").show();
-							$("#gs").show();
 							document.getElementById("w").innerHTML = "Wrong answer!!!"
-							document.getElementById("gs").innerHTML= "Get Correct Answer"
+							$("#gs").show();
+							$("#ff").click(function(){
+								document.getElementById("gs").innerHTML = "Get Correct Senctence"
+							})
+							dis();
+							csen(s11)
 						}
-					}
-					else{
+      		    }
+			    else{
 						for (var i = 0; i < 7; i++) {
 							for (var j = 0; j < h2[i].length; j++) {
 								if(s11 == h2[i][j]){
@@ -147,19 +162,111 @@ function button(n) {
 						}
 						if(cn1 == 1){
 							$("#rm").show()
-							$("#w").hide();
-							$("#gs").hide();
+							document.getElementById("gs").innerHTML = null;
 							document.getElementById("rm").innerHTML = "Right answer!!"
+							$("#gs").hide();
+							$("#cms").hide();
+							$("#w").hide();
+							$("#c").click(function(){
+								$("#w").hide();
+								$("#gs").hide();
+
+							})
 						}
 						else{
 							$("#w").show();
-							$("#gs").show();
 							document.getElementById("w").innerHTML = "Wrong answer!!"
-							document.getElementById("gs").innerHTML= "Get Correct Answer"
+							$("#gs").show();
+							$("ff").click(function(){       
+							       document.getElementById("gs").innerHTML= "Get Correct Answer"
+						})
+							dis();
+							csen(s11)
 						}
+					
 					}
-					})
+				})
+				
+
 				}
+				function csen(s){
+				$("#gs").click(function(){
+						var sp =s.split(" ");
+						var arr = sp;
+						var count = 0;
+						var ind = document.getElementById("select").selectedIndex;
+						var val = document.getElementById("select")[ind].value;
+						if(val == "eng"){
+							for (var j = 0; j < 10; j++) {
+								for(var i = 0;i < arr.length;i++){
+									if(e1[j].search(arr[i]) >= 0){
+										count++;
+									}
+								}
+								if(count != arr.length){
+									count = 0;
+								}
+								else if(count == arr.length){
+									var v = j;
+									var s11 = e2[v];
+									document.getElementById("cms").innerHTML = " "
+									for(var k = 0;k < s11.length;k++){
+										document.getElementById("cms").innerHTML += s11[k]+"<br>"
+									}
+									break;
+								}
+							}
+						}
+						if(val == "hin"){
+							for (var j = 0; j < 7; j++) {
+								for(var i = 0;i < arr.length;i++){
+									if(h1[j].search(arr[i]) >= 0){
+										count++;
+									}
+								}
+								if(count != arr.length){
+									count = 0;
+								}
+								if(count == arr.length){
+									var v1 = j;
+									var s2 = h2[v1];
+									document.getElementById("cms").innerHTML = " "
+									for(var k = 0;k < s2.length;k++){
+										document.getElementById("cms").innerHTML += s2[k]+"<br>"
+									}
+									break;
+								}
+							}
+						}
+				})
+			}
+				function dis(){
+					        $("#gs").click(function(){
+								$("#cms").show()
+								document.getElementById("gs").innerHTML = "Hide the correct Sentence"
+								h();
+
+								function h(){
+									if(document.getElementById("gs").innerHTML == "Hide the correct Sentence"){
+											$("#gs").click(function(){
+											$("#cms").hide();
+											document.getElementById("gs").innerHTML="Get Answers"
+											s();
+										})
+										}
+								}
+							    function s(){
+										if(document.getElementById("gs").innerHTML == "Get Answers"){
+											$("#gs").click(function(){
+											$("#cms").show();
+											document.getElementById("gs").innerHTML = "Hide the correct Sentence"
+											h();
+									})
+								}
+									}
+							})
+				
+			}
 			}
      }
      a();
